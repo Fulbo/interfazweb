@@ -1,0 +1,94 @@
+#ocultar {
+    visibility: hidden;
+    position: absolute;
+    height: 37px;
+}
+
+.contenidorbilletera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(202, 202, 202, 0.507);
+    max-width: 700px;
+    width: 100%;
+    vertical-align: center;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.contenidorbilletera p {
+    margin: 10px;
+    font-size: 17px;
+}
+
+.contenidorbilletera a {
+    text-shadow: 0 0 6px rgb(41, 41, 41);
+    color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+}
+
+.contenidorbilletera a:hover {
+    color: transparent;
+}
+
+.billeteravisible {
+    color: rgba(59, 59, 59, 0.8);
+}
+
+.contenidorbilletera p i {
+    margin-left: 20px;
+    background-color: rgba(0, 102, 255, 0.507);
+    border-radius: 5px;
+    padding: 10px;
+    height: 100%;
+    color: rgb(0, 75, 187);
+    text-shadow: 0 0 0px black;
+}
+
+.mensaje {
+    word-wrap: break-word;
+    width: 500px;
+    font-size: 15px;
+}
+
+.withdraw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.msjpublickey {
+    color: rgba(68, 68, 68, 0.856);
+    font-size: 25px;
+}
+
+.formularioretiro {
+    display: flex;
+    flex-direction: column;
+}
+
+.formularioretiro input[type=text] {
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 18px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#codigomonto {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#result {
+    font-size: 19px;
+}
