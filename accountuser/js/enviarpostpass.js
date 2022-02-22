@@ -18,7 +18,7 @@ $(document).ready(function() {
 
                 },
                 beforeSend: function() {
-                    $('#result').html('...')
+                    $('#result').html(" <div id='preloader_1'><span></span><span></span><span></span><span></span><span></span></div>")
 
                 }
             })

@@ -16,8 +16,10 @@
 	  	<form class="p-5 rounded shadow" 
 	  	      action="./loginuser/auth.php"
 	  	      method="post" 
-	  	      style="width: 30rem ; background-color:#4CAF50;">
-	  		<h1 class="text-center pb-5 display-4">LOGIN</h1>
+	  	      style="width: 30rem ; background-color:#00A651;">
+	  		  <header class="header">
+	<h1 class="glitched">Login</h1>
+</header>
 	  		<?php if (isset($_GET['error'])) { ?>
 	  		<div class="alert alert-danger" role="alert">
 			  <?=htmlspecialchars($_GET['error'])?>
@@ -55,6 +57,10 @@
 		</form>
 		
 	  </div>
+	  <script>
+    $("header").append("<div class='glitch-window'></div>");
+//fill div with clone of real header
+$( "h1.glitched" ).clone().appendTo( ".glitch-window" );</script>
 </body>
 </html>
 

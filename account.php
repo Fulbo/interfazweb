@@ -32,7 +32,13 @@ else {
 
 <nav class="sidebar-navigation"  style="z-index:100;">
 	<ul style="z-index:100;">
-		<li   id="boton">
+	<a href="start">
+		<li>
+			<i><img src="./img/logo.png" alt="logo" style="width: 45px;height:45px; "></i>
+			<span class="tooltip" style="color:white;">Home</span>
+		</li>
+		</a>
+	<li   id="boton">
 			<i class="fa fa-lock"></i>
 			<span class="tooltip">Change password</span>
 		</li>
@@ -56,7 +62,7 @@ else {
 	</ul>
 </nav>
 
-    <a href="start">Home</a>
+    
     <div id="content" ></div>
     
   
@@ -69,7 +75,6 @@ $('ul li').on('click', function() {
 	$('li').removeClass('active');
 	$(this).addClass('active');
 });
-
 
    </script>
 </body>

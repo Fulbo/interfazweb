@@ -19,6 +19,8 @@
     <!-- Ajax -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./static/stylepassword.css">
+    <link rel="stylesheet" href="./static/preloaderpost2.css">
 </head>
 <body>
 <?php
@@ -33,21 +35,36 @@ else {
  }
 
 ?>    
+<div class="contentchangepasssup">
+<div class="contentchangepass">
+    <h1>Change password</h1>
+<div class="elemento">    <input type="password" name="passwordant" id="passwordant" placeholder="Enter your old password">
+</div>
+<div class="elemento">    <input type="password" name="password" id="password" placeholder="New password">
+<div class="alert alert-info" id="elementpass"  style="text-align:left; display: none;">
+            <p id="passstrength">
+                <div class="mensajepass" id="passstrengthmayus"></div>
+                <div class="mensajepass" id="passstrengthnums"></div>
+                <div class="mensajepass" id="passstrengthnumbers"></div>
+                <div class="mensajepass" id="passstrengthspecial"></div>
+                
+            </p>
+            </div>
+</div>
 
-    <h1>Restablecer password</h1>
-    <input type="passwordant" name="passwordant" id="passwordant" placeholder="Enter your old password">
-    <input type="password" name="password" id="password" placeholder="New password">
-    <input type="password" name="rpassword" id="rpassword" placeholder="Repeat password">
-    <input type="submit" name="passwordenv" id="passwordenv" value="Send">
+<div class="elemento">    <input type="password" name="rpassword" id="rpassword" placeholder="Repeat password">
+</div>
+<div class="elemento">    <input type="submit" name="passwordenv" id="passwordenv" value="Send">
+</div>
+   <div id="result" style="width:80%; display:flex; justify-content:center; align-items:center; margin:auto;"></div>
 
-
-
+    </div>
+    </div>
 
   
 
 
-    <div id="result" style="width:500px; display:flex; justify-content:center;"></div>
-    
+<script src="./static/validator.js"></script>    
 <script src="./accountuser/js/enviarpostpass.js"></script>
 </body>
 </html>

@@ -1,15 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
-
-
-
-
-
 a {
     text-decoration: none !important;
 }
-
-
-
 
 .login-page {
     width: 360px;
@@ -17,14 +9,10 @@ a {
     margin: auto;
 }
 
-
-
-
-
 .form {
     position: relative;
     z-index: 1;
-    background: #2bb401;
+    background: #00A651;
     max-width: 360px;
     margin: 0 auto 100px;
     padding: 45px;
@@ -121,8 +109,6 @@ a {
     color: #EF3B3A;
 }
 
-
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -179,9 +165,70 @@ input:focus {
     font-size: 13px;
 }
 
-
-
-.contentlogininf a{
+.contentlogininf a {
     color: white;
+}
 
+header.header {
+    position: relative;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-25%);
+}
+
+header.header h1 {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.glitch-window {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 100%;
+    color: white;
+    text-shadow: 2px 0 #F9F8F8, -1px 0 yellow, -2px 0 green;
+    overflow: hidden;
+    animation: crt-me 2500ms infinite linear alternate-reverse;
+}
+
+@keyframes crt-me {
+    0% {
+        clip: rect(31px, 9999px, 94px, 0);
+    }
+    10% {
+        clip: rect(112px, 9999px, 76px, 0);
+    }
+    20% {
+        clip: rect(85px, 9999px, 77px, 0);
+    }
+    30% {
+        clip: rect(27px, 9999px, 97px, 0);
+    }
+    40% {
+        clip: rect(64px, 9999px, 98px, 0);
+    }
+    50% {
+        clip: rect(61px, 9999px, 85px, 0);
+    }
+    60% {
+        clip: rect(99px, 9999px, 114px, 0);
+    }
+    70% {
+        clip: rect(34px, 9999px, 115px, 0);
+    }
+    80% {
+        clip: rect(98px, 9999px, 129px, 0);
+    }
+    90% {
+        clip: rect(43px, 9999px, 96px, 0);
+    }
+    100% {
+        clip: rect(82px, 9999px, 64px, 0);
+    }
 }
