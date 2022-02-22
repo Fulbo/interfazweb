@@ -41,7 +41,7 @@ else {
 <div class="elemento">    <input type="password" name="passwordant" id="passwordant" placeholder="Enter your old password">
 </div>
 <div class="elemento">    <input type="password" name="password" id="password" placeholder="New password">
-<div class="alert alert-info" id="elementpass"  style="text-align:left; display: none;">
+<div class="alert alert-info" id="elementpass"  style="text-align:left; display: none; ">
             <p id="passstrength">
                 <div class="mensajepass" id="passstrengthmayus"></div>
                 <div class="mensajepass" id="passstrengthnums"></div>
