@@ -6,8 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="X-UA-Compatible" content="IE=7">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="Goldenbike" />
-<meta property="og:url" content="https://www.goldenbike.com.ar" />
+<meta property="og:title" content="Fulbostars" />
+<meta property="og:url" content="https://fulbostars.com/wp-content/themes/fulbo_theme_V2/favicon/apple-touch-icon.png" />
 <meta name="theme-color" content="#00a651">
 <meta property="og:image" content="https://fulbostars.com/wp-content/themes/fulbo_theme_V2/favicon/favicon-32x32.png" /> 
 <meta property="og:image:secure_url" content="https://fulbostars.com/wp-content/themes/fulbo_theme_V2/favicon/favicon-32x32.png" /> 
