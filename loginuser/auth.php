@@ -15,7 +15,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
 		$firma = "$email,$password,C13BECC3544694AF84022CCC5DB3EE30,C13BECC3544694AF84022CCC5DB3EE30";
 		//url de destino
-		$url = 'https://fulbostars.com:3000/api';
+		$url = 'https://45.77.191.253:3000/api';
 		
 		//iniciamos curl
 		$ch = curl_init($url);

@@ -25,7 +25,7 @@
         $email = $_SESSION['email'];
 		$firma = "$email,$passwordant,$password,C13BECC3544694AF84022CCC5DB3EE30,C13BECC3544694AF84022CCC5DB3EE30";
 		//url de destino
-		$url = 'https://fulbostars.com:3000/api';
+		$url = 'https://45.77.191.253:3000/api';
 		
 		//iniciamos curl
 		$ch = curl_init($url);
@@ -282,6 +282,42 @@ if(isset($_POST['ubienv'])){
 }
 
 
+
+//publickey
+//aca va ir lo que se cargue de usuario y password que luego va habilitar la public key
+if(isset($_POST['sendkey'])){
+
+
+
+
+
+
+
+
+}
+
+
+if(isset($_SESSION['trueuserkey'])){
+?>
+
+
+<h1>Update public key</h1>
+    
+    <input type="text" name="publickey" id="publickey" placeholder="Enter your public key">
+    <input type="submit" name="key" id="key" onclick="conectarwallet()" value="Get public key">
+    <input type="submit" name="keyenv" id="keyenv" value="update">
+
+
+
+
+
+<?php
+
+
+}
+
+
+
 if(isset($_POST['keyenv'])){
 
     if($_POST['publickey'] != null){
@@ -302,8 +338,8 @@ if(isset($_POST['keyenv'])){
 
         if($result != false){
             if($result == true){
-                echo "<p class='alert alert-success'>Your public key has been successfully changed</p>";
-                $_SESSION['billetera'] = $publickey;
+                echo "<p class='alert alert-success'>a code has been sent to your email.</p>";
+                $_SESSION['newpublickey'] = $publickey;
             }
             else{
                 echo "<p class='alert alert-danger'>Unknown error</p>";
@@ -329,6 +365,97 @@ if(isset($_POST['keyenv'])){
 
 
 
+
+
+?>
+
+<?php 
+
+if (isset($_SESSION['newpublickey'])) { 
+
+?>
+<input type="text" name="codigopublic" id="codigopublic" placeholder="Enter your code ">
+    <input type="submit" name="codpublic" id="codpublic" value="Enviar">
+
+<?php 
+}?>
+
+<?php 
+if(isset($_POST['codpublic'])){
+    if($_POST['codigopublic'] != null){
+
+        if($_POST['codigopublic']){
+            
+        $data = array(
+			'accion' => 'codigoconfirmadomobile',
+			'data' => 
+			array('user' => $_SESSION['user_email'],
+			'publickey' => htmlspecialchars($_SESSION['newpublickey']),
+            'codigo' => htmlspecialchars($_POST['codigopublic']),
+			)
+		);
+	//	echo var_dump($data);			
+		$result = conectarserver($data);
+
+        if($result == true){
+            echo  "<p class='alert alert-success'>Number changed successfully</p>";
+           unset($_SESSION['newpublickey']);
+           unset($_SESSION['cont']);
+           ?>
+           <script>
+           $(document).ready(function(){
+          
+            setTimeout(refrescar, 3000);
+          });
+               function refrescar(){
+            //update page
+            location.reload();
+          }
+                   </script>
+          <?php
+            
+  
+        }
+            
+
+        }else{
+            $_SESSION['cont'] = $_SESSION['cont'] - 1;
+            echo "<p class='alert alert-danger'>Wrong code, you have ".$_SESSION['cont']." attempts left</p>";
+            if($_SESSION['cont'] <= 0){
+                unset($_SESSION['newpublickey']);
+                unset($_SESSION['cont']); 
+                ?>
+           <script>
+               location.reload();
+           </script>
+           <?php
+            }
+
+        }
+
+
+    }else{
+        $_SESSION['cont'] = $_SESSION['cont'] - 1;
+        echo "<p class='alert alert-danger'>Wrong code, you have ".$_SESSION['cont']." attempts left</p>";
+        if($_SESSION['cont'] <= 0){
+            unset($_SESSION['newpublickey']);
+            unset($_SESSION['cont']); 
+            ?>
+       <script>
+           location.reload();
+       </script>
+       <?php
+        }
+    }
+}
+
+
+
+
+
+
+
+//fin public key
 
 
 
@@ -428,3 +555,5 @@ if(isset($_POST['teamenv'])){
 
 ?>
 <script src="./accountuser/configuraciones/funciones/enviarcodigomob.js"></script>
+<script src="./accountuser/configuraciones/funciones/enviarpostkey.js"></script>
+<script src="./accountuser/configuraciones/funciones/enviarpostcodpublic.js"></script>

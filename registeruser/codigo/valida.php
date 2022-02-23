@@ -46,7 +46,7 @@ if($_POST['codigoemail'] != null){
     $firma = "$email,$codigo,C13BECC3544694AF84022CCC5DB3EE30,C13BECC3544694AF84022CCC5DB3EE30";
 
 
-$url = 'https://fulbostars.com:3000/api';
+$url = 'https://45.77.191.253:3000/api';
 
 $ch = curl_init($url);
 

@@ -1,15 +1,17 @@
 $(document).ready(function() {
 
-    $('#codpublic').on('click', function() {
-        var mobile = $('#mobile').val();
-        var mobileenv = $('#mobileenv').val();
+    $('#sendkey').on('click', function() {
+        var userkey = $('#userkey').val();
+        var passwordkey = $('#passwordkey').val();
+        var sendkey = $('#sendkey').val();
 
         $.ajax({
                 type: 'POST',
                 url: './accountuser/configuraciones/funciones/cuentasconf.php',
                 data: {
-                    'mobile': mobile,
-                    'mobileenv': mobileenv
+                    'userkey': userkey,
+                    'passwordkey': passwordkey,
+                    'sendkey': sendkey
 
 
                 },

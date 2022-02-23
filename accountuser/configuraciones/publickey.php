@@ -36,9 +36,9 @@ else {
 
     <h1>Update public key</h1>
     
-    <input type="text" name="publickey" id="publickey" placeholder="Enter your public key">
-    <input type="submit" name="key" id="key" onclick="conectarwallet()" value="Get public key">
-    <input type="submit" name="keyenv" id="keyenv" value="update">
+    <input type="text" name="userkey" id="userkey" placeholder="Enter your email">
+    <input type="password" name="passwordkey" id="passwordkey" placeholder="Enter your password">
+    <input type="submit" name="sendkey" id="sendkey" value="Send">
 
 
 
@@ -73,6 +73,6 @@ else {
   </script>
 
 
-<script src="./accountuser/js/enviarpostkey.js"></script>
+<script src="./accountuser/js/enviarpostuserkey.js"></script>
 </body>
 </html>

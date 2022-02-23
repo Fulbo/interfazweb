@@ -1,15 +1,15 @@
 $(document).ready(function() {
 
     $('#codpublic').on('click', function() {
-        var mobile = $('#mobile').val();
-        var mobileenv = $('#mobileenv').val();
+        var codigopublic = $('#codigopublic').val();
+        var codpublic = $('#codpublic').val();
 
         $.ajax({
                 type: 'POST',
                 url: './accountuser/configuraciones/funciones/cuentasconf.php',
                 data: {
-                    'mobile': mobile,
-                    'mobileenv': mobileenv
+                    'codigopublic': codigopublic,
+                    'codpublic': codpublic
 
 
                 },
